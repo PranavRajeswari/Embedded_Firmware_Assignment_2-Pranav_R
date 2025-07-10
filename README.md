@@ -19,7 +19,7 @@ This repository contains my solution for a C programming assignment, simulating 
 | File | Description |
 |-----------------------------|---------------------------------------------|
 | `main.c`| Source code in C implementing the logic |
-| `assignment_report_pranav.pdf` | Explanation of the problem, approach & code |
+| `Embedded Firmware Engineer Assignment Report - Pranav R.pdf` | Explanation of the problem, approach & code |
 | `output_screenshot.png` | Sample terminal output of the running code |
 
 ---
