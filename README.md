@@ -1,40 +1,78 @@
-# 🛠️ Sensor Buffer Simulation in C
+# Periodic Sensor Data Generation & Buffering
 
-This repository contains my solution for a C programming assignment, simulating periodic sensor data generation and buffer processing.
-
----
-
-## 📌 Problem Overview
-
-- Simulate a sensor that generates **0–5 random bytes** every second.
-- Store this data in a **global buffer**.
-- Every **10 seconds**, checks if the buffer has **at least 50 bytes**:
-  - If yes, it prints the **latest 50 bytes in hexadecimal format**.
-  - Then **remove** those 50 bytes from the buffer.
+## 📌 Project Title:
+**Simulated Sensor Data Generation and Buffer Processing in C**
 
 ---
 
-## 📁 Project Structure
+## 🧠 Problem Statement:
 
-| File | Description |
-|-----------------------------|---------------------------------------------|
-| `main.c`| Source code in C implementing the logic |
-| `Embedded Firmware Engineer Assignment Report - Pranav R.pdf` | Explanation of the problem, approach & code |
-| `output_screenshot.png` | Sample terminal output of the running code |
-
----
-
-## 🧠 Concepts Used
-
-- Buffer management using `unsigned char` arrays
-- Time-based simulation using `sleep(1)` and `time.h`
-- Random data generation using `rand()`
-- Basic conditional and loop control in C
-- Printing in **hexadecimal format** (`%02X`)
-- Simple **debouncing logic** for byte collection
+1. Simulate a sensor that generates **random data (0–5 bytes)** every second.
+2. Store this data in a **globally accessible buffer**.
+3. Every 10 seconds:
+   - Check if the buffer has at least **50 bytes**.
+   - If yes:
+     - Print the **latest 50 bytes in HEX** format.
+     - Remove the **printed 50 bytes** from the buffer.
 
 ---
 
-## 💻 How to Run
+## 🛠️ Tools & Technologies:
 
-1. Compile the code using `gcc` or any C compiler.
+- **Language:** C
+- **Compiler:** GCC
+- **Libraries Used:** `<stdio.h>`, `<stdlib.h>`, `<time.h>`, `<unistd.h>`
+
+---
+
+## 🧩 Code Overview:
+
+The program uses:
+- A **global buffer** of 1000 bytes.
+- `rand()` to simulate random sensor data.
+- `sleep(1)` to simulate 1-second timer events.
+- Modular functions for:
+  - `GenerateSensorData()` – handles data simulation.
+  - `CheckAndPrintBuffer()` – handles buffer evaluation & printing.
+
+---
+
+## 🚀 How to Run:
+
+You can run this code in either:
+
+### 🔸 Online Compiler:
+- Copy and paste the code into an online C compiler like:
+  - [Programiz](https://www.programiz.com/c-programming/online-compiler/)
+- Run the program directly in the browser.
+
+### 🔸 Local System:
+1. Save the code in a file named `main.c`
+2. Open a terminal/command prompt.
+3. Compile the code using:
+```bash
+gcc main.c -o main
+```
+4. Run the compiled program:
+```bash
+./main
+```
+
+---
+
+
+---
+
+## 👤 Author:
+
+- **Name:** Pranav R
+- **Email:** pranav.mukundh@gmail.com
+
+---
+
+## 📎 Notes:
+
+- `MAX_BUFFER` is set to 1000 to avoid overflow.
+- In actual embedded systems, this simulation would be driven by hardware timers or interrupts.
+
+---
