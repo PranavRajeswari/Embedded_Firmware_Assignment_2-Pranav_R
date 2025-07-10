@@ -69,10 +69,3 @@ gcc main.c -o main
 - **Email:** pranav.mukundh@gmail.com
 
 ---
-
-## 📎 Notes:
-
-- `MAX_BUFFER` is set to 1000 to avoid overflow.
-- In actual embedded systems, this simulation would be driven by hardware timers or interrupts.
-
----
