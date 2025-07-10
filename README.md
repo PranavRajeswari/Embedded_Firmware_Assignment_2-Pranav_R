@@ -1,6 +1,6 @@
 # 🛠️ Sensor Buffer Simulation in C
 
-This repository contains my solution for a C programming assignment, simulating periodic sensor data generation and buffer processing — part of an assessment for an Embedded Firmware Engineer role at **Nosh Robotics Pvt Ltd**.
+This repository contains my solution for a C programming assignment, simulating periodic sensor data generation and buffer processing.
 
 ---
 
@@ -8,8 +8,8 @@ This repository contains my solution for a C programming assignment, simulating 
 
 - Simulate a sensor that generates **0–5 random bytes** every second.
 - Store this data in a **global buffer**.
-- Every **10 seconds**, check if the buffer has **at least 50 bytes**:
-  - If yes, print the **latest 50 bytes in hexadecimal format**.
+- Every **10 seconds**, checks if the buffer has **at least 50 bytes**:
+  - If yes, it prints the **latest 50 bytes in hexadecimal format**.
   - Then **remove** those 50 bytes from the buffer.
 
 ---
